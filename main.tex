@@ -1,0 +1,86 @@
+\documentclass[12pt]{article}
+\usepackage{inputenc, authblk, titling}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage[margin=1.5in]{geometry}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{enumitem}
+
+%\setlength{\droptitle}{-4em}     % Eliminate the default vertical space
+
+\title{\huge{Compilation of Math 185 Ideas\vspace{1em}}}
+\author{\large Andrew Gao \vspace{-10pt}}
+\affil{\normalsize{University of California, Berkeley \vspace{10pt}}}
+\date{\textsl{\normalsize{Last Updated: December 3, 2018\vspace{1ex}}}}
+
+
+\newtheorem{theorem}{Theorem}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+ 
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+
+\parskip 1em
+\begin{document}
+\maketitle
+
+
+%\begin{abstract}
+%This is a compilation of
+%\end{abstract}
+
+Here is a collection of various theorems, ideas, questions, and proofs that I found interesting while taking Math 185, Introduction to Complex Analysis, at UC Berkeley during Fall 2018, as well as some proofs that our textbook, \textit{Complex Variables and Applications} 9\textsuperscript{th} edition by Brown and Churchill, may have skipped over. My instructor was Professor Tim Laux. He would often explain extracurricular concepts during his office hours for me to explore on my own, some of which are found in this compilation.\vspace{1em}
+
+\tableofcontents
+\pagebreak
+
+\section{Proofs}
+\subsection*{Sufficient Conditions for Differentiability of a Complex Function}
+The reason I found this proof interesting was because of the "rigorous" nature of the analytic property, in that sense that being analytic very much restricts the nature of the function. Recall that the Cauchy-Riemann Equations were shown to not be enough for differentiability. Let the complex number $z$ = $x$ + $iy$.
+
+
+\begin{theorem}
+Let the function f(z) = u(x,y) + iv(x,y) be defined on a neighborhood of $z_0$ = $x_0$ + $iy_0$ and assume that:
+%\renewcommand{\theenumi}{\Alph{enumi}}
+\begin{enumerate}[label=\Alph*)]
+    \item The first order partial derivatives of u and v with respect to x and y exist everywhere in the neighborhood
+    \item The partial derivatives are \underline{continuous} at ($x_0$, $y_0$) and satisfy the Cauchy-Riemann equations at ($x_0$, $y_0$)
+\end{enumerate}
+Then $f^\prime(z_0)$ exists, and it equals $u_x(x_0, y_0) + iv_x(x_0,y_0)$
+\end{theorem}
+
+%\pagebreak
+\begin{proof}
+BLAH
+\end{proof}
+
+\noindent Thus the logical implications are as follows. If $f$ is an analytic function in a domain $U$ then by definition:
+\begin{alignat*}{1}
+    &\Longleftrightarrow \ \forall z \in U: \ f^\prime(z_0) = \lim_{z\to z_0} \frac{f(z) - f(z_0)}{z - z_0}\ \textrm{and such limit exists}\\
+    \intertext{This forward implies:}
+    &\Longrightarrow \tag{$\star$}\ u_x,\ u_y,\ v_x,\ v_y\ \textrm{exist and satisfy}\ u_x = v_y,\ u_y = -v_x\ \textrm{at ($x_0$, $y_0$)} 
+    \intertext{However, notice the extra condition in the reverse direction:}
+    &\Longleftarrow \ (\star) \ \ \textbf{AND}\ \ u_x,\ u_y,\ v_x,\ v_y\ \textrm{are continuous at ($x_0$, $y_0$)} 
+\end{alignat*}
+
+\noindent A great example of how $u_x,\ u_y,\ v_x,\ v_y$ must be continuous in order for the function to be analytic is $f(z) = \sqrt{z}.$
+%$$ f\ \textrm{is analytic in } U \Longleftrightarrow \ \forall z_0 \in U:\ $$
+
+
+\subsection*{Uniform Convergence of Taylor Series}
+This proof was adopted from problem INSERT NUMBER HERE from the textbook.
+
+\section{Stereographic Projection}
+
+``I always thought something was fundamentally wrong with the universe'' \citep{adams1995hitchhiker}
+
+\section{List of Theorems}
+Here is a list of theorems from the class. The order presented here is similar to the order presented in class; however, I have switched the order of certain theorems that I believe to be more proper for a re-read. 
+
+
+\bibliographystyle{plain}
+\bibliography{references}
+\end{document}
